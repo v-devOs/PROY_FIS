@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --red-color: #ff5757;
+  --green-color: #c1ff72;
+  --blue-color: #5ce1e6;
+  --purple-color: #cb6ce6;
+  --yellow-color: #ffde59;
+  --red-color-secondary: #ff3131;
+  --grey-color: #8d8c8c;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+body{
+  background-color: #dea9be;
+  padding: 100px;
+}
+
+h1,h2,h3{
+  color: white;
+}
+
+h2{
+  margin: 0;
+}
+
+button{
+  border: 2px solid #252525;
+  width: 150px;
+  height: 40px;
+}
+
+/* Displays */
+
+.grid-col-2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px
+}
+
+.grid-row-4{
+  grid-template-rows: repeat(4,1fr);
+}
+
+.flex{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Estilos de bordes */
+
+.border-white{
+  border: 1px solid white;
+}
+
+.border-radius-10{
+  border-radius: 10px;
+}
+
+.border-radius-5, button{
+  border-radius: 5px;
+}
+
+/* Margenes */
+
+.mt-30{
+  margin-top: 30px;
+}
+.mt-10{
+  margin-top: 10px;
+}
+
+/* Paddings */
+.p-15{
+  padding: 15px;
+}
+
+/* Widths */
+.width-500{
+  width: 500px
+}
+
+
+/* Estilos botones seleccion de sabor */
+
+.btn-flavor-lemon{
+  background-color:  var(--green-color);
+}
+.btn-flavor-horchata{
+  background-color: white;
+}
+.btn-flavor-jamaica{
+  background-color: var(--red-color);
+}
+
+/* Estilos botones seleccion de tamano */
+
+.btn-size-ch{
+  background-color: var(--purple-color) ;
+}
+.btn-size-md{
+  background-color: var(--yellow-color);
+}
+.btn-size-g{
+  background-color: var(--grey-color);
+}
+
+/* Estilos botones seleccion de hielo */
+.btn-ice-yes{
+  background-color: var(--blue-color);
+}
+
+/* Estilos boton de finalizar */
+.btn-finish{
+  width: 500px;
+  background-color: var(--red-color-secondary);
+  color: white;
+  border: none;
+}
+
+
+/* Estilos modulo de llenado */
+.container-drink{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+

@@ -131,3 +131,67 @@ button{
   background-color: white;
 }
 
+
+
+
+
+/* Estilos del vaso */
+.container-drink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.glass-container {
+  width: 133px;
+}
+
+.cap {
+  position: relative;
+  z-index: 2;
+  width: 133px;
+  height: 29px;
+  margin-bottom: -8px;
+  transform-origin: 0 100%;
+  transition: all .67s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.cap_open .cap {
+  transform: rotate(-90deg);
+}
+
+.glass {
+  width: 127px;
+  height: 171px;
+  margin-left: 3px;
+}
+
+.glass path {
+  fill: #f4f4f4;
+}
+
+.star-container {
+  position: relative;
+  width: 86px;
+  margin: 0 auto;
+}
+
+.star {
+  width: 17px;
+  height: 17px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIj4KPHBhdGggZmlsbD0iIzc5NjczNCIgZD0ibTQ4LDIzNCA3My0yMjYgNzMsMjI2LTE5Mi0xNDBoMjM4eiIvPgo8L3N2Zz4=) center center no-repeat;
+  background-size: 15px auto;
+  transition: all .5s;
+  position: absolute;
+  opacity: 0;
+  transform-origin: 50% 50%;
+  transform: rotate(360deg);
+  left: 35px;
+  bottom: 200px;
+}
+
+.star_posed.star {
+  opacity: 1;
+}

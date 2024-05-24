@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="styles/styles.css">
   <title>Bebidas</title>
 </head>
@@ -14,77 +13,76 @@
       <div>
         <div class="border-white border-radius-10 p-15 width-500">
           <h2>¿Cuál sabor de agua desea seleccionar?</h2>
-
           <div class="mt-30 flex">
-            <button class="btn-flavor-lemon">Limon</button>
+            <button class="btn-flavor-lemon">Limón</button>
             <button class="btn-flavor-horchata">Horchata</button>
             <button class="btn-flavor-jamaica">Jamaica</button>
           </div>
-
         </div>
         <div class="border-white border-radius-10 mt-30 p-15 width-500">
           <h2>¿Qué tamaño de bebida prefiere?</h2>
-
           <div class="mt-30 flex">
             <button class="btn-size-ch">Chico 500ml</button>
             <button class="btn-size-md">Mediano 750ml</button>
             <button class="btn-size-g">Grande 1000ml</button>
           </div>
-
         </div>
         <div class="border-white border-radius-10 mt-30 p-15 width-500">
           <h2>¿Desea agregar hielo a su bebida?</h2>
-
           <div class="mt-30 flex">
             <button class="btn-ice-yes">Agregar hielo</button>
             <button class="btn-ice-no">Sin hielo</button>
           </div>
         </div>
-
         <div class="mt-30">
           <button class="btn-finish">
             <h2>Finalizar</h2>
           </button>
         </div>
+      </div>
+    </section>
 
+    <!-- Modulo de llenado -->
+    <section class="border-white border-radius-10 p-15">
+      <div class="container-drink border-radius-5">
+
+        <div class="wrapper">
+          <div class="glass" id="bottle">
+            <div class="bubble-container">
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+            </div>
+            <div class="water-container">
+              <div class="water red" data-height="20"></div>
+              <div class="water blue" data-height="60"></div>
+              <div class="water yellow" data-height="60"></div>
+              <div class="water green" data-height="60"></div>
+              <div class="water purple" data-height="60"></div>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
 
 
-    <!-- Modulo de llenado -->
-    <section class="border-white border-radius-10 p-15 ">
-
-      <div class="container-drink border-radius-5">
-        <div class="glass-container">
-          <div class="cap">
-            <svg xmlns:xlink="http://www.w3.org/1999/xlink" height="28.9px" width="133.0px" xmlns="http://www.w3.org/2000/svg">
-              <g transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 29.0)">
-                <path d="M9.7 -29.0 L53.2 -29.0 79.8 -29.0 80.8 -29.0 123.3 -29.0 125.35 -11.4 132.2 -10.4 133.0 -0.1 80.8 -0.1 79.8 -0.1 53.2 -0.1 0.0 -0.1 0.8 -10.4 7.65 -11.4 9.7 -29.0" fill="#ffffff" fill-rule="evenodd" stroke="none"/>
-              </g>
-            </svg>
-          </div>
-          <div class="glass">
-            <svg xmlns:xlink="http://www.w3.org/1999/xlink" height="171.0px" width="126.7px" xmlns="http://www.w3.org/2000/svg">
-              <g transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
-                <path d="M126.25 0.0 Q126.8 1.0 126.65 4.5 126.8 6.65 123.3 7.65 L123.15 9.0 105.4 171.0 21.3 171.0 3.55 9.0 3.4 7.65 Q-0.1 6.65 0.05 4.5 -0.1 1.0 0.45 0.0 L126.25 0.0 M122.6 3.05 L122.5 3.05 122.5 3.1 122.6 3.05 M4.2 3.05 L4.1 3.05 4.2 3.1 4.2 3.05" fill="#ffffff" fill-rule="evenodd" stroke="none"/>
-              </g>
-            </svg>
-          </div>
-          <div class="star-container"></div>
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <p id="modal-text"></p>
+          <button id="modal-accept" class="modal-button">Aceptar</button>
+          <button id="modal-cancel" class="modal-button">Cancelar</button>
         </div>
       </div>
 
-
-
-
-
-      </div>
-
-    </section>
-
-    
     <script src="./scripts/index.js"></script>
-
   </main>
 </body>
 </html>

@@ -8,6 +8,15 @@
   --yellow-color: #ffde59;
   --red-color-secondary: #ff3131;
   --grey-color: #8d8c8c;
+  
+  --white: rgba(253, 228, 255, 0.715);
+  --yellow: #ffd100;
+  --red: #ff5338;
+  --blue: #1E91D6;
+  --green: #0CCE6B;
+  --purple: #52489C;
+  --bubble-base: 20px;
+  --ice-color: rgba(173, 216, 230, 0.8);
 }
 
 *{
@@ -66,6 +75,80 @@ button{
   border-radius: 5px;
 }
 
+
+
+
+
+/* Estilos botones seleccion de sabor */
+
+.btn-flavor-lemon{
+  background-color:  var(--green-color);
+}
+.btn-flavor-horchata{
+  background-color: white;
+}
+.btn-flavor-jamaica{
+  background-color: var(--red-color);
+}
+
+/* Estilos botones seleccion de tamano */
+
+.btn-size-ch{
+  background-image: url('../assets/btn-chico.jpg');  
+  color: transparent;
+  background-size: cover;
+  background-position: center;
+  
+  padding: 0px 0px;
+}
+.btn-size-md{
+  background-image: url('../assets/btn-mediano.png');  
+  color: transparent;
+  background-size: cover;
+  background-position: center;
+  
+  padding: 0px 0px;
+}
+.btn-size-g{
+  background-image: url('../assets/btn-grande.png');  
+  color: transparent;
+  background-size: cover;
+  background-position: center;
+  
+  padding: 0px 0px;
+}
+
+/* Estilos botones seleccion de hielo */
+.btn-ice-yes{
+  background-image: url('../assets/btn-con-hielos.png');  
+  color: transparent;
+  background-size: cover;
+  background-position: center;
+  
+  padding: 0px 0px;
+}
+
+.btn-ice-no{
+  background-image: url('../assets/btn-sin-hielos.png');  
+  color: transparent;
+  background-size: cover;
+  background-position: center;
+  
+  padding: 0px 0px;
+
+}
+
+/* Estilos boton de finalizar */
+.btn-finish{
+  width: 500px;
+  background-color: var(--red-color-secondary);
+  color: white;
+  border: none;
+}
+
+
+
+
 /* Margenes */
 
 .mt-30{
@@ -86,48 +169,403 @@ button{
 }
 
 
-/* Estilos botones seleccion de sabor */
-
-.btn-flavor-lemon{
-  background-color:  var(--green-color);
-}
-.btn-flavor-horchata{
-  background-color: white;
-}
-.btn-flavor-jamaica{
-  background-color: var(--red-color);
-}
-
-/* Estilos botones seleccion de tamano */
-
-.btn-size-ch{
-  background-color: var(--purple-color) ;
-}
-.btn-size-md{
-  background-color: var(--yellow-color);
-}
-.btn-size-g{
-  background-color: var(--grey-color);
-}
-
-/* Estilos botones seleccion de hielo */
-.btn-ice-yes{
-  background-color: var(--blue-color);
-}
-
-/* Estilos boton de finalizar */
-.btn-finish{
-  width: 500px;
-  background-color: var(--red-color-secondary);
-  color: white;
-  border: none;
-}
-
 
 /* Estilos modulo de llenado */
 .container-drink{
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
+
+/* Estilos botones seleccion de sabor */
+/* Variables */
+/* :root {
+  --white: #fff;
+  --yellow: #ffd100;
+  --red: #ff5338;
+  --blue: #1E91D6;
+  --green: #0CCE6B;
+  --purple: #52489C;
+  --bubble-base: 20px;
+} */
+
+/* Global styles */
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.small-bottle{
+  margin-top: 20%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 225px;
+  height: 337.5px;
+  background: var(--white);
+  border-left: 10px solid var(--white);
+  border-right: 10px solid var(--white);
+  padding: 15px 0 5px;
+}
+
+
+.medium-bottle{
+  margin-top: 20%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 275px;
+  height: 387.5px;
+  background: var(--white);
+  border-left: 10px solid var(--white);
+  border-right: 10px solid var(--white);
+  padding: 15px 0 5px;
+}
+
+
+
+.glass {
+  margin-top: 10%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 300px;
+  height: 450px;
+  background: var(--white);
+  border-left: 10px solid var(--white);
+  border-right: 10px solid var(--white);
+  padding: 15px 0 5px;
+}
+
+.glass:before, .small-bottle::before, .medium-bottle::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: 40px;
+  background: #ddd;
+  border-radius: 100% 100%;
+}
+
+.glass:after, .small-bottle::after, .medium-bottle::after{
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: 40px;
+  background: var(--white);
+  border-radius: 100% 100%;
+}
+
+.bubble-container {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  width: var(--bubble-base);
+  height: var(--bubble-base);
+  background: var(--white);
+  border-radius: 50%;
+  bottom: calc(var(--bubble-base) * -3);
+}
+
+.bubble:nth-child(1) {
+  left: 20.25%;
+  transform: scale(0.9);
+  opacity: .4;
+  animation: down2up 2s infinite .2s;
+}
+
+.bubble:nth-child(2) {
+  left: 12.50%;
+  transform: scale(1.5);
+  opacity: .7;
+  animation: down2up 1.5s infinite .1s;
+}
+
+.bubble:nth-child(3) {
+  left: 23.75%;
+  transform: scale(1.6);
+  opacity: .9;
+  animation: down2up 2.2s infinite 0.6s;
+}
+
+.bubble:nth-child(4) {
+  left: 34.50%;
+  transform: scale(1.4);
+  opacity: .6;
+  animation: down2up 2.4s infinite 1.5s;
+}
+
+.bubble:nth-child(5) {
+  left: 45.75%;
+  transform: scale(0.8);
+  opacity: .8;
+  animation: down2up 2.9s infinite .6s;
+}
+
+.bubble:nth-child(6) {
+  left: 57.0%;
+  transform: scale(2.1);
+  opacity: .5;
+  animation: down2up 2.6s infinite .8s;
+}
+
+.bubble:nth-child(7) {
+  left: 38.25%;
+  transform: scale(1.3);
+  opacity: .6;
+  animation: down2up 1.9s infinite .9s;
+}
+
+.bubble:nth-child(8) {
+  left: 79.75%;
+  transform: scale(1.2);
+  opacity: .4;
+  animation: down2up 1.8s infinite 1.3s;
+}
+
+.bubble:nth-child(9) {
+  left: 53%;
+  transform: scale(1);
+  opacity: .2;
+  animation: down2up 2.7s infinite .4s;
+}
+
+.water-container {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+
+.water {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+  height: 15%;
+  z-index: 1;
+}
+
+.water:last-child:before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  border-radius: 100% 100%;
+}
+
+.water:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  border-radius: 100% 100%;
+}
+
+/* .water.blue {
+  background: var(--blue);
+}
+
+.water.blue:before {
+  background: lighten(var(--blue), 10%);
+}
+
+.water.blue:after {
+  background: var(--blue);
+}
+
+.water.red {
+  background: var(--red);
+}
+
+.water.red:before {
+  background: lighten(var(--red), 10%);
+}
+
+.water.red:after {
+  background: var(--red);
+}
+
+.water.yellow {
+  background: var(--yellow);
+}
+
+.water.yellow:before {
+  background: lighten(var(--yellow), 10%);
+}
+
+.water.yellow:after {
+  background: var(--yellow);
+}
+
+.water.green {
+  background: var(--green);
+}
+
+.water.green:before {
+  background: lighten(var(--green), 10%);
+}
+
+.water.green:after {
+  background: var(--green);
+}
+
+.water.purple {
+  background: var(--purple);
+}
+
+.water.purple:before {
+  background: lighten(var(--purple), 10%);
+}
+
+.water.purple:after {
+  background: var(--purple);
+} */
+
+/* @keyframes down2up {
+  from {
+    bottom: calc(var(--bubble-base) * -3);
+  }
+  to {
+    bottom: 90%;
+  }
+} */
+
+
+
+/* Estilos para el modal */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px; 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.modal-button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #5ed262;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: #45a049;
+}
+
+#modal-cancel{
+  background-color: red;
+}
+
+
+
+
+/* Ice styles */
+.ice-container {
+  position: relative;
+  bottom: 9dvh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 80%;
+  display: flex;
+  display: none;
+  gap: 1px;
+  flex-wrap: nowrap;
+  /* justify-content: space-around; */
+  z-index: 5;
+}
+
+.ice {
+  background-color: var(--ice-color);
+  border-radius: 5px;
+  margin: 5px;
+  animation: floatIce 4s infinite ease-in-out;
+}
+
+.ice:nth-child(1) {
+  width: 18%;
+  height: 11%;
+  animation-duration: 4s;
+}
+
+.ice:nth-child(2) {
+  width: 35%;
+  height: 21%;
+  animation-duration: 5s;
+}
+
+.ice:nth-child(3) {
+  width: 25%;
+  height: 16%;
+  animation-duration: 4.5s;
+}
+
+.ice:nth-child(4) {
+  width: 14%;
+  height: 9%;
+  animation-duration: 3.5s;
+}
+
+.ice:nth-child(5) {
+  width: 55px;
+  height: 55px;
+  animation-duration: 5.5s;
+}
+
+.ice:nth-child(6) {
+  width: 30px;
+  height: 30px;
+  animation-duration: 3s;
+}
+
+@keyframes floatIce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

@@ -112,4 +112,34 @@ function changeColorOfTheDrink(flavor){
         break;
   }
 }
-  
+
+
+const finishButton = document.querySelector('.btn-finish');
+const modalFinish = document.getElementById('modal_finish');
+const modalFinishText = document.getElementById('modal-finish-text');
+const modalFinishAccept = document.getElementById('modal-finish-accept');
+const modalFinishCancel = document.getElementById('modal-finish-cancel');
+
+finishButton.addEventListener('click', () => {
+  modalFinishText.innerText = `¿Su pedido es correcto?\n
+    Tamaño: ${tamano || 'No seleccionado'}, 
+    Sabor: ${selectedFlavor || 'No seleccionado'}, 
+    Hielo: ${selectedHielo || 'No seleccionado'}`;
+  modalFinish.style.display = 'block';
+});
+
+modalFinishCancel.addEventListener('click', () => {
+  modalFinish.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target == modalFinish) {
+    modalFinish.style.display = 'none';
+  }
+});
+
+modalFinishAccept.addEventListener('click', () => {
+  // Aquí puedes agregar la lógica que deseas al aceptar el pedido
+  modalFinish.style.display = 'none';
+  alert('Pedido aceptado!');
+});

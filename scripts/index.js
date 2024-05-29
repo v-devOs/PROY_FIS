@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       selectedHielo === 'Agregar hielo' ? 'flex' : 'none'
 
     if (selectedFlavor !== ''){
-      changeColorOfTheDrink(selectedFlavor)
+      setFlavor(selectedFlavor)
     }
   });
 
@@ -96,7 +96,7 @@ function showBottleSize(selectedTamano, componente){
   }
 }
   
-function changeColorOfTheDrink(flavor){
+function setFlavor(flavor){
   selectedFlavor = flavor;
 }
   

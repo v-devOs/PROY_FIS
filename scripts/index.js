@@ -97,19 +97,6 @@ function showBottleSize(selectedTamano, componente){
 }
   
 function changeColorOfTheDrink(flavor){
-    switch (flavor) {
-      case 'Jamaica':
-        bottle.style.background = 'var(--red-color)'
-        break;
-      case 'Horchata':
-        bottle.style.background = 'var(--white)';
-        break;
-      case 'Limón':
-        bottle.style.background = 'var(--green-color)';
-        break;
-    
-      default:
-        break;
-  }
+  selectedFlavor = flavor;
 }
   

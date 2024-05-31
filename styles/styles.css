@@ -346,7 +346,7 @@ button{
 }
 
 .water {
-  display: inline-block;
+  display: none;
   vertical-align: top;
   position: relative;
   width: 100%;
@@ -374,74 +374,57 @@ button{
   border-radius: 100% 100%;
 }
 
-/* .water.blue {
-  background: var(--blue);
+
+.water.Limón {
+  background: var(--green-color);
 }
 
-.water.blue:before {
-  background: lighten(var(--blue), 10%);
+.water.Limón:before {
+  background: lighten(var(--green-color), 10%);
 }
 
-.water.blue:after {
-  background: var(--blue);
+.water.Limón:after {
+  background: var(--green-color);
 }
 
-.water.red {
-  background: var(--red);
+.water.Horchata {
+  background: white;
 }
 
-.water.red:before {
-  background: lighten(var(--red), 10%);
+.water.Horchata:before {
+  background: lighten(white, 10%);
 }
 
-.water.red:after {
-  background: var(--red);
+.water.Horchata:after {
+  background: white;
 }
 
-.water.yellow {
-  background: var(--yellow);
+.water.Jamaica {
+  background: var(--red-color);
 }
 
-.water.yellow:before {
-  background: lighten(var(--yellow), 10%);
+.water.Jamaica:before {
+  background: lighten(var(--red-color), 10%);
 }
 
-.water.yellow:after {
-  background: var(--yellow);
+.water.Jamaica:after {
+  background: var(--red-color);
 }
 
-.water.green {
-  background: var(--green);
-}
 
-.water.green:before {
-  background: lighten(var(--green), 10%);
-}
 
-.water.green:after {
-  background: var(--green);
-}
-
-.water.purple {
-  background: var(--purple);
-}
-
-.water.purple:before {
-  background: lighten(var(--purple), 10%);
-}
-
-.water.purple:after {
-  background: var(--purple);
-} */
-
-/* @keyframes down2up {
+@keyframes fillBottle {
   from {
-    bottom: calc(var(--bubble-base) * -3);
+    height: 0%;
   }
   to {
-    bottom: 90%;
+    height: 80%;
   }
-} */
+}
+
+.water.filled {
+  animation: fillBottle 2s forwards;
+}
 
 
 

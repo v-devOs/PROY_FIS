@@ -130,13 +130,21 @@ window.addEventListener('click', (event) => {
 modalFinishAccept.addEventListener('click', () => {
   modalFinish.style.display = 'none';
 
-  alert('¡Pedido aceptado!');
+
+  if(selectedFlavor == '' || selectedHielo == '' || selectedTamano == ''){
+    alert('¡Se debe de completar el formulario para finalizar!');
+
+  }
+  else{
+    alert('¡Pedido aceptado!');
 
   
-  const water = document.querySelector('.water.' + selectedFlavor);
-  if (water) {
-    water.style.display = 'inline-block'
-    water.classList.add('filled');
+    const water = document.querySelector('.water.' + selectedFlavor);
+    if (water) {
+      water.style.display = 'inline-block'
+      water.classList.add('filled');
+    }
+
   }
 
   console.log(water)
